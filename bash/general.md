@@ -43,5 +43,43 @@ M> N
   # N is a filename
 
 M>&N
-  # N is another file descriptor, e.g. 2>&1
+  # N is another file descriptor
+```
+
+***Other Examples***
+```bash
+2> 1 # stderr to filename 1
+2>&1 # stderr to stdout
+i>&j # file descriptor i to j
+>&j  # default 1 to j
+```
+
+#### Command <
+- Acccepts input form a file
+- Redirection of stdin
+
+#### Command | (Pipe)
+- General purpose chaining tool
+- More general than >
+
+***Examples***
+```bash
+grep searchword <filename # search for search word, input filename
+cat *.txt | sort | uniq > resultfile
+  # Pipes output of previous command to next command
+  # Prints all txt files, sorts, grabs unique, write to 'resultfile'
+```
+
+### Interpolation
+- Syntax is `$(...)`
+- `echo "My directory is $(...) ok?"`
+
+### Exec
+- Redirects stdin to file
+- Allows for line by line reading
+
+```bash
+exec < data-file
+read a1             # prints line 1
+read a2             # prints line 2
 ```
