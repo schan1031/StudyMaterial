@@ -83,3 +83,31 @@ exec < data-file
 read a1             # prints line 1
 read a2             # prints line 2
 ```
+
+### Alias
+- Create a shorthand for a command
+- Stored for user in ~/.bashrc
+- Can unalias with `unalias`
+
+```bash
+alias la="ls -a"
+unalias la
+```
+
+### Regex
+  - `.` - Any character
+  - `^` - Beginning of line
+  - `$` - Line end
+  - `[abc]` - any character inside the brackets
+  - `[!abc]` - any character not in the brackets
+  - `?` - None or exactly one repeat of previous character
+  - `+` - One or several of previous character
+  - `*` - None or several repeats of previous
+  - `{m,n}` - Minimum of m to max n repeats
+
+### Brace Exapnsion
+- Converts lists into separate strings
+```bash
+$ mkdir /tmp/example{1,2,3} # Creates three files
+$ mkdir /tmp/example1 /tmp/example2 /tmp/example3
+```
