@@ -1,5 +1,25 @@
 # Bash notes
 
+### Essential Commands
+
+#### cat
+- concatenate, reads given files or stdin and prints to stdout
+
+#### wc
+- word count, can count lines, words or bytes
+
+#### grep
+- line matching, words
+
+#### sort
+- sort lines of text
+
+#### less
+- text viewer, separate window, avoids stdout
+
+#### time
+- run programs, summarize system resource time and usage
+
 ### stdin, stdout, stderr
 
 - ***stdin*** - 0, used when file needs to read input
@@ -105,7 +125,7 @@ unalias la
   - `*` - None or several repeats of previous
   - `{m,n}` - Minimum of m to max n repeats
 
-### Brace Exapnsion
+### Brace Expansion
 - Converts lists into separate strings
 ```bash
 $ mkdir /tmp/example{1,2,3} # Creates three files
