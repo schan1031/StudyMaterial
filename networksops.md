@@ -142,7 +142,7 @@ Address: 172.217.6.68
 ```
 
 #### route
-- shows and manipulates *ip* routing table.
+- shows and manipulates *ip* routing table
 - `route` shows routing table
 - `route add -net 10.10.10.0/24 gw 192.168.0.1`
 - `route del -net 10.10.10.0/24 gw 192.168.0.1`
@@ -175,3 +175,8 @@ google.com has address 172.217.6.46
 #### iwconfig
 - Wireless network interface
 - Similar to ifconfig, can set SSID channel, encryption
+
+Info from:
+- Wikipedia
+- [Tecmint Linux Network/Troubleshooting](https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/)
+- [Tecmint Linux Advanced](https://www.tecmint.com/20-advanced-commands-for-linux-experts/)
