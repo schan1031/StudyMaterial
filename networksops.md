@@ -123,3 +123,55 @@ www.google.com.		36	IN	A	172.217.6.68
 ;; WHEN: Mon Sep 11 16:21:30 PDT 2017
 ;; MSG SIZE  rcvd: 59
 ```
+
+#### nslookup
+- Command used to query internet domain name servers
+- DNS related queries
+- Shows records (IP Addresses)
+
+```bash
+$ nslookup www.google.com
+
+Server:		127.0.1.1
+Address:	127.0.1.1#53
+
+Non-authoritative answer:
+Name:	www.google.com
+Address: 172.217.6.68
+
+```
+
+#### route
+- shows and manipulates *ip* routing table.
+- `route` shows routing table
+- `route add -net 10.10.10.0/24 gw 192.168.0.1`
+- `route del -net 10.10.10.0/24 gw 192.168.0.1`
+- `route add default gw 192.168.0.1` adds a default gateway
+
+#### host
+- host command finds IP address, and queries DNS records
+- `-t` argument finds DNS resource records
+
+```bash
+$ host google.com
+
+google.com has address 216.58.194.206
+google.com has IPv6 address 2607:f8b0:4005:809::200e
+google.com mail is handled by 50 alt4.aspmx.l.google.com.
+google.com mail is handled by 40 alt3.aspmx.l.google.com.
+google.com mail is handled by 10 aspmx.l.google.com.
+google.com mail is handled by 30 alt2.aspmx.l.google.com.
+google.com mail is handled by 20 alt1.aspmx.l.google.com.
+
+$ host -t A google.com
+
+google.com has address 172.217.6.46
+```
+
+#### arp
+- Address Resolution Protocol
+- View kernel's ARP tables
+
+#### iwconfig
+- Wireless network interface
+- Similar to ifconfig, can set SSID channel, encryption
