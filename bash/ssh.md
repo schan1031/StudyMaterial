@@ -25,4 +25,12 @@
 - If successful, begins session
 - More detailed info using `ssh -v`
 
-## Examples
+### Diffie-Hellman Exchange
+- Exchange between two parties
+- Agree on a large prime number as a seed value
+- Agree on encryption generator
+- Each party comes up with another prime number, secret from the other, used as a private key
+- Private key, encryption generator and shared prime number are used to generate public key
+- Public keys are then exchanged
+- Each party uses the received public key, own private key and original shared seed to create a shared secret key, which will be the same secret key
+- Shared secret 
