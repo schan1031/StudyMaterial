@@ -1,6 +1,6 @@
-# SSH
+# Making the Connection
 
-## What is SSH?
+## SSH
 - Secure Socket Shell
 - Network protocol that provides secure access to remote locations
 - `ssh user@0.0.0.0`
@@ -33,4 +33,19 @@
 - Private key, encryption generator and shared prime number are used to generate public key
 - Public keys are then exchanged
 - Each party uses the received public key, own private key and original shared seed to create a shared secret key, which will be the same secret key
-- Shared secret 
+- Shared secret
+
+## What happens when you curl or type in a website?
+- Reads the url, and queries DNS for the IP address
+- First checks cached domains previously visited on the OS or browser
+- If no OS or browser cache match, queries DNS resolver
+- DNS resolver usually provided by ISP, comes with DHCP assignment
+- Can use open source alternates like Google or OpenDNS
+- Resolver checks cache, then queries the root DNS servers
+- There are 13 root DNS servers
+- Root DNS servers do not provide the IP address, they direct to the top level domains (TLDs)
+- TLDs hold the location of the authoritative name servers for each domain in the TLD such as **.com**
+- The **.com** generic TLD will have the location of google.com's NS records, e.g. `ns1.google.com`
+- DNS Resolver then queries one of the returned name servers for the IP of google.com
+- The name server will know the IP and return a DNS record with the corresponding IP
+- IP is returned to the user side and the connection can be made
