@@ -49,3 +49,7 @@
 - DNS Resolver then queries one of the returned name servers for the IP of google.com
 - The name server will know the IP and return a DNS record with the corresponding IP
 - IP is returned to the user side and the connection can be made
+
+### Notes
+- Glue records glue the IP address of a domain to so that a the resolver can point the user to the name server to find the IP of the actual url
+- More info at [here](http://blog.catchpoint.com/2014/07/01/dns-lookup-domain-name-ip-address/)
