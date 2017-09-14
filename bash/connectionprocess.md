@@ -67,3 +67,14 @@
   - `192.168.123.65-126`
   - `192.168.123.129-190`
   - `192.168.123.193-254`
+
+
+## PXE Booting
+- Pre-boot eXecution Environment
+- Allows a server to boot from a server on a network before the OS boots on the hard drive
+- Connects NIC to LAN, OS and software can be loaded onto device over network
+
+## Lights Out Management (LOM)
+- LOM is the ability to monitor servers remotely
+- Complete LOM system usually contains a hardware component to facilitate continuous monitoring of servers, temperature, utilization, load
+- Allows for remote operations such as reboot, shut down, troubleshooting, alarms, fan control and OS reinstallation
