@@ -53,3 +53,17 @@
 ### Notes
 - Glue records glue the IP address of a domain to so that a the resolver can point the user to the name server to find the IP of the actual url
 - More info at [here](http://blog.catchpoint.com/2014/07/01/dns-lookup-domain-name-ip-address/)
+
+## IP Addressing and Subnetting
+
+- IP Addresses are expressed by a 32 bit number, broken up into four 8 bit portions, e.g. `192.168.0.1`
+- Subnet mask looks like `255.255.255.0`
+- Separates out the network address and host address
+- `192.168.123.0` is the network address, `000.000.000.132` is the host address
+- A subnet mask of `255.255.255.192` divides into four networks of 62 hosts each
+- First and last of all 0's or all 1's are invalid
+- The four networks become:
+  - `192.168.123.1-62`
+  - `192.168.123.65-126`
+  - `192.168.123.129-190`
+  - `192.168.123.193-254`
