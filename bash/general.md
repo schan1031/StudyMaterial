@@ -137,3 +137,17 @@ $ mkdir /tmp/example1 /tmp/example2 /tmp/example3
 - Inexact method is to use a while, and sleep
 - `while true; do ./script.sh; sleep 60;` performs `script.sh` every 60 seconds
 - Proper way is Crontab
+
+### Crontab
+
+- Task scheduler for Linux
+- Good for routine tasks such as daily scanning, backups
+- Executed automatically in the background
+- Six fields, 1-5 are for time, 6 is for command
+
+#### Samples
+- `crontab -e` opens crontab file in editor
+- `crontab -l` lists crontab entries for current user
+- `0 2 * * * /path/script.sh` runs `script.sh` every day at 2 AM
+- `0 17 * * sun  /path/script.sh` runs script.sh every Sunday at 5 PM
+- `*/10 * * * * /path/script.sh` runs script.sh every 10 minutes
