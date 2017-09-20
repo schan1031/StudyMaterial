@@ -131,3 +131,9 @@ unalias la
 $ mkdir /tmp/example{1,2,3} # Creates three files
 $ mkdir /tmp/example1 /tmp/example2 /tmp/example3
 ```
+
+### Scheduling Jobs
+- Two main ways to do it
+- Inexact method is to use a while, and sleep
+- `while true; do ./script.sh; sleep 60;` performs `script.sh` every 60 seconds
+- Proper way is Crontab
